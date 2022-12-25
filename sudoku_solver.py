@@ -93,6 +93,7 @@ def get_values():
             if val.strip() == "":
                 rows.append(0)
             else:
+                cells[(row, col)].configure(fg="red")
                 rows.append(int(val))
 
         board.append(rows)
@@ -117,6 +118,7 @@ def update_values(board):
 main_window = Tk()
 main_window.title("Sudoku Solver")
 main_window.geometry("324x500")
+main_window.resizable(width=False, height=False)
 main_window.configure(background="light blue")
 
 label = Label(main_window, text="Fill in the numbers and click solve", background="light blue", font=("arial", 13))
