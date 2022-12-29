@@ -79,6 +79,7 @@ def clear_values():
     for row in range(2, 11):
         for col in range(1, 10):
             cell = cells[(row, col)]
+            cell.configure(fg="black")
             cell.delete(0, "end")
 
 
